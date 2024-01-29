@@ -177,3 +177,5 @@ console.log(myVar)
 //? 2 durum var ise ternary
 //? 3-6 arasi durum var ise if-else
 //? 6 dan fazla ise switch-case
+
+
