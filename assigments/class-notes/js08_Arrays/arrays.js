@@ -93,3 +93,15 @@ console.log(cars, newEl)
 //? 1.parametre: eklenecek indis numarasi
 //? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
 //? 3.parametre: yeni eklenecek veri
+
+cars.splice(1, 0, "Porsche")
+console.log(cars)
+
+cars.splice(4, 0, "Serçe", "tofaş")
+console.log(cars)
+
+//* reverse()
+cars.reverse()
+console.log(cars)
+
+//* sort()
