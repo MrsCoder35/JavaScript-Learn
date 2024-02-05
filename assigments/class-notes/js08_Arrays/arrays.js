@@ -63,3 +63,33 @@ console.log(myArr)
 // ! 3.Yöntem (Array.of())
 const sayilar = Array.of(4)
 console.log(sayilar)
+
+//? ===========================================================
+//?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR
+//? ===========================================================
+
+const cars = ["BMW", "Mercedes", "Audi", "Togg", "Anadol", "Devrim"]
+
+cars[cars.length] = "Şahin"
+console.log(cars)
+
+//* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
+const el = cars.push("Kartal")
+console.log(cars, el)
+
+//** pop() son elemani siler ve sildigi elemani dondurur.
+const deletedCar = cars.pop()
+console.log(deletedCar, cars)
+
+//* shift, dizinin 0. indeks elemanini siler ve silenen elemani dondurur.
+const bmw = cars.shift()
+console.log(bmw, cars)
+
+//* unshift dizinin 0. indeksine eleman ekler ve dizinin son eleman sayisini dondurur.
+const newEl = cars.unshift("Toros")
+console.log(cars, newEl)
+
+//* splice()
+//? 1.parametre: eklenecek indis numarasi
+//? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
+//? 3.parametre: yeni eklenecek veri
