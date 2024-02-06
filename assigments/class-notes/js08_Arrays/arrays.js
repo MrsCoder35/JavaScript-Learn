@@ -48,7 +48,7 @@ names[2] = names[2].toLocaleLowerCase()
 console.log(names)
 
 //! arrays.js:46 Uncaught TypeError: Assignment to constant variable.
-// names = [4, 6, 7]
+// names = [4, 6, 7]    //!başta const olarak değil,let olarak tanımlasaydık hata almazdık
 
 // ! 2.Yöntem (Object Constructor)
 const programmingLangs = new Array("GO", "JS", "Java")
@@ -105,3 +105,17 @@ cars.reverse()
 console.log(cars)
 
 //* sort()
+
+//! sort metodu diziyi iterasyona ugratir ve ascii karaktere göre sıralama yapar.
+//! Dolayısıyla string'le doğru şekilde sıralama yapabilir.
+cars.sort()
+console.log(cars)
+cars.reverse()
+console.log(cars)
+
+//! Ancak sayılar ile doğrudan siralama yapilirsa ascii'Den dolayı yanlis degerler siralanmiş olabilir.
+const numbers = [3, 2, 22, 6, 1, 11, 9, 3]
+
+numbers.sort((a, b) => a - b) //? Asc küçükten büyüğe
+numbers.sort((a, b) => b - a) //? DESC (büyükten küçüğe)
+console.log(numbers)
