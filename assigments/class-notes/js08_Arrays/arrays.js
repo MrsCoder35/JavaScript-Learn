@@ -7,7 +7,7 @@ console.log("***** ARRAYS ******")
 //* Dizi Tanimlama
 //*-----------------------------------------------
 
-//! 1-Square bracket ( Array Literal) yöntemi ile dizi tanımlama 
+//! 1-Square bracket ( Array Literal) yöntemi ile dizi tanımlama
 //! En çok tercih edilen yöntem
 const names = [
   "Ahmet",
@@ -15,9 +15,11 @@ const names = [
   "Saffet",
   "Can",
   true,
-  6.6,
+  6,
   [1, 3],
   "Ara Vakti",
+  "Ders başladi",
+  "Bir sornaki ara geldi",
 ]
 console.log(names)
 console.log("Uzunluk:", names.length)
@@ -26,10 +28,10 @@ console.log(typeof names) //* object
 //* Diziden Veri Okuma-Yazma (indisleme)
 //* ---------------------------------------------------------
 
+//? OKUMA
 console.log(names[3]) //? Can
 console.log(names[4]) //? true
 console.log(names[6][0]) //? 1
-
 
 //? Dizinin son elemanını bir değişkene saklayalım
 
@@ -48,7 +50,7 @@ names[2] = names[2].toLocaleLowerCase()
 console.log(names)
 
 //! arrays.js:46 Uncaught TypeError: Assignment to constant variable.
-// names = [4, 6, 7]    //!başta const olarak değil,let olarak tanımlasaydık hata almazdık
+// names = [4, 6, 7]
 
 // ! 2.Yöntem (Object Constructor)
 const programmingLangs = new Array("GO", "JS", "Java")
@@ -93,7 +95,6 @@ console.log(cars, newEl)
 //? 1.parametre: eklenecek indis numarasi
 //? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
 //? 3.parametre: yeni eklenecek veri
-
 cars.splice(1, 0, "Porsche")
 console.log(cars)
 
@@ -105,7 +106,6 @@ cars.reverse()
 console.log(cars)
 
 //* sort()
-
 //! sort metodu diziyi iterasyona ugratir ve ascii karaktere göre sıralama yapar.
 //! Dolayısıyla string'le doğru şekilde sıralama yapabilir.
 cars.sort()
@@ -119,3 +119,17 @@ const numbers = [3, 2, 22, 6, 1, 11, 9, 3]
 numbers.sort((a, b) => a - b) //? Asc küçükten büyüğe
 numbers.sort((a, b) => b - a) //? DESC (büyükten küçüğe)
 console.log(numbers)
+
+//* fill()
+
+const degerler = [2, 1, 4, 33, 7, 9, 22]
+degerler.fill(0)
+
+// for (let i = 0, j = 1; i < degerler.length; i++) {
+//   degerler[i] = j++
+// }
+
+degerler.fill(77, 3) //?1.parmetere: deger, 2.start index
+degerler.fill(44, 3, 5) //?1.parmetere: deger, 2.start index, 3. end index (not inclusive)
+
+console.log(degerler)
