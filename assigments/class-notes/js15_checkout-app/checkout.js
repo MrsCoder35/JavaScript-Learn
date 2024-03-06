@@ -56,6 +56,14 @@ products.addEventListener("click", (e) => {
     e.target.previousElementSibling.textContent++;
 
     calculatePrice(e.target)
+  }else if (e.target.classList.contains("fa-minus")) {
+    if(e.target.nextElementSibling.textContent > 1)
+    e.target.nextElementSibling.textContent--;
+
+    calculatePrice(e.target)
+  }else if (e.target.classList.contains("fa-trash-can")){
+    e.target.closest(".product").remove( )
+    calculatePrice(e.target)
   }
 });
 
