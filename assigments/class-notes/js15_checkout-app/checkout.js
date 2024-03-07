@@ -94,4 +94,9 @@ const calculateTotalPrice = () => {
         (sum, price) => sum + Number(price.textContent),0 
     )
 
+    //! DOM'a sonucları yazdırma
+
+    const selectedPrice = document.querySelector("#selected-price")
+    selectedPrice.textContent = total.toFixed(2)
+
 }
