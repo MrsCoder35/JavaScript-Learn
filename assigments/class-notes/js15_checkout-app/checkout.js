@@ -100,7 +100,7 @@ const calculateTotalPrice = () => {
         (sum, price) => sum + Number(price.textContent),0 
     )
 
-    const shippingPrice = total >= REE_SHIPPING_LIMIT ? 0.00 : SHIPPING_PRICE
+    const shippingPrice = total >= FREE_SHIPPING_LIMIT || total === 0 ? 0.00 : SHIPPING_PRICE
 
     //! DOM'a sonucları yazdırma
 
