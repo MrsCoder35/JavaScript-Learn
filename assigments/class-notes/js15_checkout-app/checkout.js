@@ -82,4 +82,16 @@ const calculatePrice = (btn) => {
     productPrice.textContent = (quantity.textContent * discountedPrice.textContent)
     .toFixed(2)
 
+    calculateTotalPrice()
+
+}
+
+const calculateTotalPrice = () => {
+
+    const prices = document.querySelectorAll("#product-price")
+
+    const total = [...prices].reduce(
+        (sum, price) => sum + Number(price.textContent),0 
+    )
+
 }
