@@ -41,6 +41,8 @@ deleteAllBtn.addEventListener("click", () => {
   products.classList.add("no-product");
   document.querySelector(".delete-div").remove();
   // document.querySelector(".delete-div").computedStyleMap.display = "none"
+
+  calculateTotalPrice()
 });
 
 products.addEventListener("click", (e) => {
@@ -102,12 +104,18 @@ const calculateTotalPrice = () => {
 
     const shippingPrice = total >= FREE_SHIPPING_LIMIT || total === 0 ? 0.00 : SHIPPING_PRICE
 
+    const taxPrice = total * TAX_RATE
+
+    const sum = total + taxPrice + shippingPrice
+
     //! DOM'a sonucları yazdırma
 
     const selectedPrice = document.querySelector("#selected-price")
     selectedPrice.textContent = total.toFixed(2)
 
     document.getElementById("shipping").textContent = shippingPrice.toFixed(2)
+    document.getElementById("tax").textContent = taxPrice.toFixed(2)
+    document.getElementById("total").textContent = sum.toFixed(2)
 
 }
 
