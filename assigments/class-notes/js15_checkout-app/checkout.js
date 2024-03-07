@@ -23,6 +23,12 @@
 //   })
 // }
 
+//! CONSTANTS
+
+const FREE_SHIPPING_LIMIT = 3000
+const SHIPPING_PRICE = 25.99
+const TAX_RATE = 0.18
+
 //? Selectors
 
 const deleteAllBtn = document.querySelector(".delete-div .fa-trash-can");
@@ -94,9 +100,17 @@ const calculateTotalPrice = () => {
         (sum, price) => sum + Number(price.textContent),0 
     )
 
+    const shippingPrice = total >= REE_SHIPPING_LIMIT ? 0.00 : SHIPPING_PRICE
+
     //! DOM'a sonucları yazdırma
 
     const selectedPrice = document.querySelector("#selected-price")
     selectedPrice.textContent = total.toFixed(2)
 
+    document.getElementById("shipping").textContent = shippingPrice.toFixed(2)
+
 }
+
+window.addEventListener("load", () => {
+    calculateTotalPrice()
+})
