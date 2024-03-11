@@ -19,3 +19,13 @@ export { add, sub, div, mul }
 const PI = 3.14
 
 const primeNumbers = [2, 3, 5, 7, 13]
+
+
+//? default export (sadece bir kere kullanılır.)
+const message = () => {
+    console.log("End of Module")
+  }
+  
+  export default message
+  
+  

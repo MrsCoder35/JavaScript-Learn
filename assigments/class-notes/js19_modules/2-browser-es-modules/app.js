@@ -16,3 +16,21 @@ console.log("ADD:", add(3, 5))
 console.log("SUB:", sub(3, 5))
 console.log("MUL:", mul(6, 5))
 console.log("DIV:", div(8, 5))
+
+
+import { PI as pi } from "./hesapMakinasi.js" //? Hoisted
+console.log(pi)
+
+import giveMessage from "./hesapMakinasi.js"
+giveMessage()
+
+//? internal add function
+const add = (a, b, c) => a + b + c
+
+console.log(add(3, 4, 5))
+
+//! use strict modu dogrudan enable oldugu icin hata verir.
+// deneme = 5
+
+//? global scope this kelimesi window nesnesini göstermez
+console.log(this) //? undefined
