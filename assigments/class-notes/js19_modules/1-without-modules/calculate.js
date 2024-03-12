@@ -11,3 +11,5 @@ const totalPrice = (products) => {
 
 myVariable = "my string" //! use Strict -> myVariable is not defined
 console.log(myVariable)
+
+console.log(this) //? window
